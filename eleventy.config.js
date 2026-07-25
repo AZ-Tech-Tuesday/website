@@ -1,6 +1,9 @@
+import { HtmlBasePlugin } from "@11ty/eleventy";
 import { parse } from "csv-parse/sync";
 
 export default function (eleventyConfig) {
+	eleventyConfig.addPlugin(HtmlBasePlugin);
+
   // Any .csv file placed in src/_data becomes an array of objects keyed
   // by header row (date, location, url, sponsor, sponsor_url, logo, badge,
   // spotlight) — the same shape parseCSV() built by hand in the old app.js.

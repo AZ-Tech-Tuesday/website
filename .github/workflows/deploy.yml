@@ -3,7 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
 
 jobs:
   build:
@@ -32,7 +31,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         id: deployment
         with:
-          path: _site
+          path: _site/
 
   deploy:
     needs: build
