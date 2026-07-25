@@ -5,32 +5,41 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
+      - name: Cache npm
+        uses: actions/cache@v5
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+      - name: Cache Eleventy .cache
+        uses: actions/cache@v5
+        with:
+          path: ./.cache
+          key: ${{ runner.os }}-eleventy-fetch-cache
       - run: npm ci
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - run: npm run build-ghpages
+      - uses: actions/upload-pages-artifact@v5
+        id: deployment
         with:
           path: _site
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
