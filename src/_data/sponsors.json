@@ -1,0 +1,6 @@
+[
+  { "name": "XYZ Galaxy", "logo": "xyz.png", "url": "https://xyzgalaxy.com", "needsLightBg": false },
+  { "name": "CTC Ops", "logo": "ctc.png", "url": "https://ctcops.io", "needsLightBg": false },
+  { "name": "Florida Coastal University", "logo": "fcu.png", "url": "https://www.floridacoastaluniversity.com/", "needsLightBg": false },
+  { "name": "Light Source Communications", "logo": "lightsource.png", "url": "http://lscfiber.com/", "needsLightBg": false }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "aztechtuesday",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "csv-parse": "^5.5.6"
+  }
+}
