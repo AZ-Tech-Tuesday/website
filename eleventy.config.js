@@ -33,6 +33,7 @@ export default function (eleventyConfig) {
   );
 
   // Static assets — copied through untouched
+  eleventyConfig.addPassthroughCopy({"src/img/favicon.ico": "favicon.ico"});
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/members");
   eleventyConfig.addPassthroughCopy("src/sponsors");
