@@ -1,6 +1,6 @@
 [
   { "name": "XYZ Galaxy", "logo": "xyz.png", "url": "https://xyzgalaxy.com" },
-  { "name": "CTC Ops", "logo": "ctc.png", "url": "https://ctcops.io" },
+  { "name": "CTC Ops", "logo": "ctc.avif", "url": "https://ctcops.io" },
   { "name": "Florida Coastal University", "logo": "fcu.png", "url": "https://www.floridacoastaluniversity.com/" },
   { "name": "Light Source Communications", "logo": "lightsource.png", "url": "http://lscfiber.com/" }
 ]
