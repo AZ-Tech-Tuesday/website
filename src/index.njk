@@ -76,12 +76,10 @@ title: AZ Tech Tuesday — Weekly Tech & Business Happy Hour
           <tr>
             <th scope="col">Date</th>
             <th scope="col">Location</th>
-            <th scope="col">URL</th>
               <th scope="col" class="text-center" style="width:1%">RSVP</th>
             <th scope="col">Badge</th>
             <th scope="col">Spotlight</th>
             <th scope="col">Sponsor</th>
-            <th scope="col">Sponsor URL</th>
           </tr>
         </thead>
         <tbody id="eventsBody">
@@ -91,7 +89,6 @@ title: AZ Tech Tuesday — Weekly Tech & Business Happy Hour
             <td>
               {% if e.location %}{% if e.url %}<a href="{{ e.url }}" target="_blank" rel="noopener" class="link-warning">{{ e.location }}</a>{% else %}{{ e.location }}{% endif %}{% else %}TBD{% endif %}
             </td>
-            <td class="text-truncate small" style="max-width:160px;">{% if e.url %}<a href="{{ e.url }}" target="_blank" rel="noopener" class="link-secondary">{{ e.url }}</a>{% else %}&nbsp;{% endif %}</td>
               <td class="text-center text-nowrap">
                 <a href="#rsvp" class="btn btn-sm btn-outline-warning" data-date="{{ e.date }}" data-target="rsvpDate" data-past-hide>RSVP</a>
               </td>
@@ -106,7 +103,6 @@ title: AZ Tech Tuesday — Weekly Tech & Business Happy Hour
                 <a href="#contact" class="btn btn-sm btn-outline-secondary text-nowrap" data-date="{{ e.date }}" data-target="spDate" data-past-hide>Sponsor this week</a>
               {% endif %}
             </td>
-            <td class="text-truncate small" style="max-width:160px;">{% if e.sponsor_url %}<a href="{{ e.sponsor_url }}" target="_blank" rel="noopener" class="link-secondary">{{ e.sponsor_url }}</a>{% else %}&nbsp;{% endif %}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -126,12 +122,10 @@ title: AZ Tech Tuesday — Weekly Tech & Business Happy Hour
           <tr>
             <th scope="col">Date</th>
             <th scope="col">Location</th>
-            <th scope="col">URL</th>
             <th scope="col">Logo</th>
             <th scope="col">Badge</th>
             <th scope="col">Spotlight</th>
             <th scope="col">Sponsor</th>
-            <th scope="col">Sponsor URL</th>
           </tr>
         </thead>
         <tbody>
@@ -141,7 +135,6 @@ title: AZ Tech Tuesday — Weekly Tech & Business Happy Hour
             <td>
               {% if e.location %}{% if e.url %}<a href="{{ e.url }}" target="_blank" rel="noopener" class="link-warning">{{ e.location }}</a>{% else %}{{ e.location }}{% endif %}{% else %}TBD{% endif %}
             </td>
-            <td class="text-truncate small" style="max-width:160px;">{% if e.url %}<a href="{{ e.url }}" target="_blank" rel="noopener" class="link-secondary">{{ e.url }}</a>{% else %}&nbsp;{% endif %}</td>
             <td class="align-middle">
               {% if e.logo %}
                 <img src="/sponsors/{{ e.logo }}" alt="" style="width:48px;height:32px;object-fit:contain">
@@ -158,7 +151,6 @@ title: AZ Tech Tuesday — Weekly Tech & Business Happy Hour
                 <span class="text-body-secondary">No sponsor listed</span>
               {% endif %}
             </td>
-            <td class="text-truncate small" style="max-width:160px;">{% if e.sponsor_url %}<a href="{{ e.sponsor_url }}" target="_blank" rel="noopener" class="link-secondary">{{ e.sponsor_url }}</a>{% else %}&nbsp;{% endif %}</td>
           </tr>
           {% endfor %}
         </tbody>
