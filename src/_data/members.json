@@ -4,5 +4,7 @@
   { "name": "Eddie Redick", "role": "info@ctcops.io", "photo": "redick.jpeg" },
   { "name": "Jonathon Gammill", "role": "jgammill@lscfiber.com", "photo": "gammill.webp" },
   { "name": "Jim Pfleger", "role": "jpfleger@acm.org", "photo": "jpfleger.jpg" },
-  { "name": "George Drumheller IV", "role": "george.drumheller@gmail.com", "photo": "drumheller.jpg" }
+  { "name": "George Drumheller IV", "role": "george.drumheller@gmail.com", "photo": "drumheller.jpg" },
+  { "name": "Drew Grant", "role": "drew.grant@neorithmic.com", "photo": "grant.png" },
+  { "name": "Jack Bryant", "role": "jackbryant1098@hotmail.com", "photo": "bryant.webp" }
 ]
