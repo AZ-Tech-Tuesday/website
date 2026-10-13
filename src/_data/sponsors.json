@@ -3,5 +3,6 @@
   { "name": "CTC Ops", "logo": "ctc.avif", "url": "https://ctcops.io" },
   { "name": "Florida Coastal University", "logo": "fcu.png", "url": "https://www.floridacoastaluniversity.com/" },
   { "name": "Light Source Communications", "logo": "lightsource.png", "url": "http://lscfiber.com/" },
-  { "name": "Neorithmic LLC", "logo": "neorithmic.jpg", "url": "https://www.linkedin.com/company/neorithmic-llc" }
+  { "name": "Neorithmic LLC", "logo": "neorithmic.jpg", "url": "https://www.linkedin.com/company/neorithmic-llc" },
+  { "name": "Tonia AI", "logo": "tonia.png", "url": "https://tonia.ai" }
 ]
