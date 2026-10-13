@@ -70,7 +70,19 @@
     const el = body.children[targetIndex];
     if (el && scroll) {
       const thead = scroll.querySelector("thead");
-      scroll.scrollTop = Math.max(0, el.offsetTop - (thead ? thead.offsetHeight : 0));
+      let userScrolled = false;
+      const scrollToTarget = function () {
+        if (userScrolled) return;
+        const offset = el.getBoundingClientRect().top - scroll.getBoundingClientRect().top + scroll.scrollTop;
+        scroll.scrollTop = Math.max(0, offset - (thead ? thead.offsetHeight : 0));
+      };
+      scrollToTarget();
+      ["wheel", "touchstart", "keydown"].forEach(function (t) {
+        scroll.addEventListener(t, function () { userScrolled = true; }, { once: true, passive: true });
+      });
+      window.addEventListener("load", function () { requestAnimationFrame(scrollToTarget); });
+      window.addEventListener("pageshow", function () { requestAnimationFrame(scrollToTarget); });
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(scrollToTarget);
     }
   })();
 
