@@ -20,6 +20,41 @@ title: AZ Tech Tuesday — Weekly Tech & Business Happy Hour
   </div>
 </header>
 
+{% if techweek.show %}
+<section id="tech-week" class="py-5 border-top border-secondary-subtle">
+  <div class="container py-4">
+    <div class="card border-warning border-2 bg-body-tertiary overflow-hidden">
+      <div class="card-body p-4 p-lg-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-8">
+            <a href="{{ techweek.url }}" target="_blank" rel="noopener" class="d-inline-block mb-4"><img src="/img/aztw27-horizontal.svg" alt="Arizona Tech Week 2027" class="logo-invert d-block" style="width:360px;max-width:100%;height:auto"></a>
+            <p class="text-uppercase fw-semibold text-warning small mb-2" style="letter-spacing:.18em">{{ techweek.dates }}</p>
+            <h2 class="display-6 fw-bold mb-3">One Tuesday isn't enough. We're taking the whole week.</h2>
+            <p class="fs-5 mb-3">For Arizona Tech Week, AZ Tech Tuesday goes all in: seven days of hands-on sessions, expert talks and tech-forward showcases, plus multiple happy hours to keep the conversations going.</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              {% for t in ["AI", "Robotics", "Quantum Computing", "Analytics", "Medicine", "Sports", "Business", "Engineering", "& more"] %}
+              <span class="badge rounded-pill border border-warning text-warning fw-semibold px-3 py-2">{{ t }}</span>
+              {% endfor %}
+            </div>
+            <p class="text-body-secondary mb-0">Learn something new by day, meet the people building it by night. Founders, engineers, creators, analysts and geeks, all in the same rooms for one week. Pace yourself.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-grid gap-3">
+              {% if techweek.calendar %}
+              <a href="{{ techweek.calendar }}" class="btn btn-warning btn-lg fw-semibold">See Our Tech Week Calendar</a>
+              {% else %}
+              <span class="btn btn-outline-secondary btn-lg fw-semibold disabled">Our Calendar Drops Soon</span>
+              {% endif %}
+              <a href="{{ techweek.url }}" target="_blank" rel="noopener" class="btn btn-outline-warning btn-lg fw-semibold">Explore AZ Tech Week <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section id="about" class="py-5 border-top border-secondary-subtle">
   <div class="container py-4">
     <p class="text-uppercase fw-semibold text-warning small mb-2">What is Tech Tuesday?</p>
